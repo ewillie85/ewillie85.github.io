@@ -123,7 +123,7 @@ section {
     object-fit: cover;
     display: block;
 
-    filter: grayscale(70%) brightness(75%) contrast(90%);
+    filter: grayscale(55%) brightness(80%) contrast(85%) sepia(10%);
 }
 
 .about-text {
