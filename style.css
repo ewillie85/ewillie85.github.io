@@ -1,3 +1,281 @@
+/* --------------------------------
+   BASE
+-------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #11110f;
+    color: #e8e5dc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* --------------------------------
+   HERO
+-------------------------------- */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8vw;
+    border-bottom: 1px solid #2b2a26;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    color: #9a978e;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(5rem, 14vw, 12rem);
+    font-weight: 400;
+    line-height: 0.82;
+    letter-spacing: -0.06em;
+    margin-left: -0.05em;
+}
+
+.intro {
+    max-width: 560px;
+    margin-top: 3rem;
+    font-size: 1.15rem;
+    color: #b8b5ad;
+}
+
+.scroll-link {
+    display: inline-block;
+    margin-top: 4rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #d8d4ca;
+    border-bottom: 1px solid #68665f;
+    padding-bottom: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-link:hover {
+    opacity: 0.5;
+}
+
+
+/* --------------------------------
+   GENERAL SECTIONS
+-------------------------------- */
+
+section {
+    padding: 10rem 8vw;
+    border-bottom: 1px solid #2b2a26;
+}
+
+.section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: #77746d;
+    margin-bottom: 5rem;
+}
+
+
+/* --------------------------------
+   ABOUT
+-------------------------------- */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    align-items: start;
+}
+
+.photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: #1b1b18;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text {
+    max-width: 580px;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    margin-bottom: 3rem;
+}
+
+.about-text p {
+    color: #aaa79f;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+
+/* --------------------------------
+   MUSIC
+-------------------------------- */
+
+.music {
+    background: #171714;
+}
+
+.music-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    align-items: end;
+}
+
+.music-content > div:first-child p {
+    max-width: 420px;
+    color: #aaa79f;
+    font-size: 1.05rem;
+}
+
+.audio-player {
+    border-top: 1px solid #45433d;
+    padding-top: 1.5rem;
+}
+
+.track-number {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: #77746d;
+    margin-bottom: 2rem;
+}
+
+.audio-player h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+.track-description {
+    color: #77746d;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+audio {
+    width: 100%;
+}
+
+
+/* --------------------------------
+   FOOD FOREST
+-------------------------------- */
+
+.forest-content {
+    max-width: 850px;
+}
+
+.forest-content p {
+    max-width: 550px;
+    color: #aaa79f;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* --------------------------------
+   FOOTER
+-------------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 8vw;
+    color: #68665f;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: clamp(4.5rem, 22vw, 8rem);
+    }
+
+    .intro {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    section {
+        padding: 6rem 2rem;
+    }
+
+    .section-label {
+        margin-bottom: 3rem;
+    }
+
+    .about-content,
+    .music-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    h2 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    .photo {
+        aspect-ratio: 4 / 5;
+    }
+
+    footer {
+        padding: 2rem;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+/* RESUME
 @page{
   size: letter portrait;
   margin: 0;
@@ -366,4 +644,4 @@ li{
   font-family: "Source Code Pro";
   font-weight: 400;
   font-style: normal;
-}
+} */
